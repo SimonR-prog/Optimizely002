@@ -1,0 +1,10 @@
+﻿
+
+@using EPiServer.Web.Mvc.Html
+@using Optimizely002.Models.ViewModels
+
+@model StartPageViewModel
+
+
+<h1>@Model.CurrentPage.Heading</h1>
+<h1>@Html.PropertyFor(x => x.CurrentPage.Heading)</h1>
