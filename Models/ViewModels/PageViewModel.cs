@@ -6,7 +6,7 @@ public class PageViewModel<T> : IPageViewModel<T> where T : SitePageData
 {
     public PageViewModel(T currentPage)
     {
-        currentPage = currentPage;
+        CurrentPage = currentPage;
     }
     public T CurrentPage { get; set; }
 

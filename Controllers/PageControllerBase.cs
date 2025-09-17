@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EPiServer.Web.Mvc;
+using Optimizely002.Models.Pages;
 
 namespace Optimizely002.Controllers;
 
-public class PageControllerBase<T> : PageController<T> where T : SitePageData
+public abstract class PageControllerBase<T> : PageController<T> where T : SitePageData
 {
-    public IActionResult Index()
-    {
-        return View();
-    }
 }

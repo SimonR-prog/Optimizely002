@@ -20,16 +20,4 @@ public class SitePageData : PageData
         }
         set => this.SetPropertyValue(p => p.MetaDescription, value);
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
