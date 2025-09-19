@@ -16,7 +16,7 @@ public class SitePageData : PageData
         {
             var metaDescription = this.GetPropertyValue(p => p.MetaDescription);
 
-            return !string.IsNullOrEmpty(metaDescription) ? metaDescription : PageName;
+            return !string.IsNullOrWhiteSpace(metaDescription) ? metaDescription : Name;
         }
         set => this.SetPropertyValue(p => p.MetaDescription, value);
     }

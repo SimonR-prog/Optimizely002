@@ -26,10 +26,4 @@ public class Program
             .UseSerilog()   
             .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>());
 
-
-
-
-
-
-
 }

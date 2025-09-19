@@ -1,20 +1,19 @@
 ﻿@using Optimizely002.Models.Pages
 @using Optimizely002.Models.ViewModels
 
-
 @model IPageViewModel<SitePageData>
 
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title></title>
-        <meta name="description" value="@Model.CurrentPage.MetaDescription" />
-    </head>
+<head>
+    <title></title>
+    <meta name="description" value="@Model.CurrentPage.MetaDescription" />
+</head>
     
-    <body>
-        <div>
-            @RenderBody()
-        </div>
-    </body>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
 </html>
