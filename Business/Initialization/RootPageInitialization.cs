@@ -8,7 +8,7 @@ namespace Optimizely002.Business.Initialization;
 
 [InitializableModule]
 [ModuleDependency(typeof(CmsCoreInitialization))]
-public class RootPageInitialization
+public class RootPageInitialization : IInitializableModule
 {
     public void Initialize(InitializationEngine context)
     {
