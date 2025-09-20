@@ -7,6 +7,8 @@ namespace Optimizely002.Models.Pages;
     GUID = "623CEBCD-6DD4-47F2-B454-1C7E578AF466",
     GroupName = Globals.GroupNames.Specialized
     )]
+
+//[ImageUrl("/pages/CMS-icon-page-02.png")]
 public class StartPage : SitePageData
 {
     [Display(
@@ -14,5 +16,6 @@ public class StartPage : SitePageData
         Order = 10
         )]
     [CultureSpecific]
+    
     public virtual string Heading { get; set; } = string.Empty;
 }

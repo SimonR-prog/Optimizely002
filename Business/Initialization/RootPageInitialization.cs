@@ -6,7 +6,6 @@ using Optimizely002.Models.Pages;
 
 namespace Optimizely002.Business.Initialization;
 
-
 [InitializableModule]
 [ModuleDependency(typeof(CmsCoreInitialization))]
 public class RootPageInitialization
