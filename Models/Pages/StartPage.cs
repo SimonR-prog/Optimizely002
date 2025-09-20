@@ -8,7 +8,7 @@ namespace Optimizely002.Models.Pages;
     GroupName = Globals.GroupNames.Specialized
     )]
 
-//[ImageUrl("/pages/CMS-icon-page-02.png")]
+[ImageUrl("/pages/CMS-icon-page-02.png")]
 public class StartPage : SitePageData
 {
     [Display(
