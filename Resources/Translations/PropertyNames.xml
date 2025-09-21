@@ -31,13 +31,11 @@
 				</properties>
 			</startpage>
 		</contenttypes>
-		
 		<tabs>
 			<content>Content</content>
 			<settings>Settings</settings>
 		</tabs>
 	</language>
-	
 	<language name="Svenska" id="sv">
 		<contenttypes>
 			<icontentdata>
@@ -69,7 +67,6 @@
 				</properties>
 			</startpage>
 		</contenttypes>
-
 		<tabs>
 			<content>Innehåll</content>
 			<settings>Inställningar</settings>
