@@ -7,3 +7,10 @@
 
 <h1>@Model.CurrentPage.Heading</h1>
 <h1>@Html.PropertyFor(x => x.CurrentPage.Heading)</h1>
+
+
+<h1>@Html.Raw(@Model.CurrentPage.Preamble)</h1>
+<h1>@Html.Raw(@Model.CurrentPage.MainBody)</h1>
+
+
+<img src="@Url.ContentUrl(Model.CurrentPage.Image)" />
