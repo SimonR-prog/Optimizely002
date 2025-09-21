@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<languages>
+	<language name="English" id="en">
+		<contenttypes>
+			<icontentdata>
+				<properties>
+					<metadescription>
+						<caption>Meta description</caption>
+						<help>Add a meta description</help>
+					</metadescription>
+				</properties>
+			</icontentdata>
+			<startpage>
+				<properties>
+					<heading>
+						<caption>Heading</caption>
+						<help>Add a heading</help>
+					</heading>
+					<preamble>
+						<caption>Preamble</caption>
+						<help>Add a preamble</help>
+					</preamble>
+					<mainbody>
+						<caption>MainBody</caption>
+						<help>Add a mainbody</help>
+					</mainbody>
+					<image>
+						<caption>Image</caption>
+						<help>Add an image</help>
+					</image>
+				</properties>
+			</startpage>
+		</contenttypes>
+		
+		<tabs>
+			<content>Content</content>
+			<settings>Settings</settings>
+		</tabs>
+	</language>
+	
+	<language name="Svenska" id="sv">
+		<contenttypes>
+			<icontentdata>
+				<properties>
+					<metadescription>
+						<caption>Metadescription</caption>
+						<help>Lägg till en metadescription</help>
+					</metadescription>
+				</properties>
+			</icontentdata>
+			<startpage>
+				<properties>
+					<heading>
+						<caption>Rubrik</caption>
+						<help>Lägg till en rubrik</help>
+					</heading>
+					<preamble>
+						<caption>Brödtext</caption>
+						<help>Lägg till en brödtext</help>
+					</preamble>
+					<mainbody>
+						<caption>Text</caption>
+						<help>Lägg till en text</help>
+					</mainbody>
+					<image>
+						<caption>Bild</caption>
+						<help>Lägg till en bild</help>
+					</image>
+				</properties>
+			</startpage>
+		</contenttypes>
+
+		<tabs>
+			<content>Innehåll</content>
+			<settings>Inställningar</settings>
+		</tabs>
+	</language>
+</languages>
