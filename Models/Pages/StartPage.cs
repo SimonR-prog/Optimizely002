@@ -38,6 +38,7 @@ public class StartPage : SitePageData
         Order = 30
         )]
     [CultureSpecific]
+    //[ScaffoldColumn(false)]
     public virtual XhtmlString MainBody { get; set; }
 
 
