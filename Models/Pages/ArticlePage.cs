@@ -8,6 +8,7 @@ namespace Optimizely002.Models.Pages;
     GUID = "AAE76A1F-C82F-4EB7-87A7-ED24083369B1",
     GroupName = Globals.GroupNames.Specialized
     )]
+[ImageUrl("/pages/CMS-icon-page-07.png")]
 public class ArticlePage : SitePageData
 {
     [Display(
