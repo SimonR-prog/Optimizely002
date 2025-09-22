@@ -3,6 +3,7 @@ using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Routing;
+using Optimizely002.Business.Extensions;
 
 namespace Optimizely002
 {
@@ -27,8 +28,13 @@ namespace Optimizely002
             services
                 .AddCmsAspNetIdentity<ApplicationUser>()
                 .AddCms()
+                .AddNackademin()
                 .AddAdminUserRegistration()
                 .AddEmbeddedLocalization<Startup>();
+
+
+            // add media line here:
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
