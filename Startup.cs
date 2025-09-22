@@ -1,4 +1,5 @@
 using EPiServer.Cms.Shell;
+using EPiServer.Cms.Shell.UI.Configurations;
 using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
@@ -32,9 +33,7 @@ namespace Optimizely002
                 .AddAdminUserRegistration()
                 .AddEmbeddedLocalization<Startup>();
 
-
-            // add media line here:
-
+            services.Configure<UploadOptions>(x => { x.FileSizeLimit = 52438800; });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
