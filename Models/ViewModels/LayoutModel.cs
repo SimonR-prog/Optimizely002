@@ -5,4 +5,6 @@ namespace Optimizely002.Models.ViewModels;
 public class LayoutModel
 {
     public StartPage StartPage { get; set; }
+
+    public SettingsPage SettingsPage { get; set; }
 }

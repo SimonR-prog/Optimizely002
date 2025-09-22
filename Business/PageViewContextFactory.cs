@@ -28,7 +28,31 @@ public class PageViewContextFactory
 
         return new LayoutModel
         {
-            StartPage = startPage
+            StartPage = startPage,
+            SettingsPage = GetSettingsPage()
         };
+    }
+
+    private SettingsPage GetSettingsPage()
+    {
+        if (SiteDefinition.Current.StartPage != ContentReference.EmptyReference)
+        {
+            var settingsPage = _contentLoader.GetChildren<SettingsPage>
+                (SiteDefinition.Current.StartPage).FirstOrDefault();
+
+            if (settingsPage != null)
+            {
+                return settingsPage;
+            }
+            else
+            {
+                //insert log here.
+            }
+        }
+        else
+        {
+            //insert log here.
+        }
+        return null;
     }
 }
