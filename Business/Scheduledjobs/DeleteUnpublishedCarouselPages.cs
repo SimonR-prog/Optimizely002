@@ -15,7 +15,7 @@ namespace Optimizely002.Business.Scheduledjobs
         private readonly IContentLoader _contentLoader;
         private ISiteDefinitionRepository _siteDefinitionRepository;
         private bool _stopSignaled;
-        private IDescendantService _descendantService;
+        private readonly IDescendantService _descendantService;
         private readonly IContentRepository _contentRepository;
 
         public DeleteUnpublishedCarouselPages(IContentLoader contentLoader, ISiteDefinitionRepository siteDefinitionRepository, bool stopSignaled, IContentRepository contentRepository, IDescendantService descendantService)
