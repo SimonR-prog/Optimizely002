@@ -4,7 +4,7 @@ using EPiServer.Web;
 using Optimizely002.Models.Pages;
 using Optimizely002.Services.Interfaces;
 
-namespace Optimizely002.Business.Scheduledjobs
+namespace Optimizely002.Business.ScheduledJobs
 {
     [ScheduledPlugIn(
         GUID = "1F0271BE-48FD-4F6B-B752-7BF2F2ED55EB",
@@ -18,13 +18,13 @@ namespace Optimizely002.Business.Scheduledjobs
         private readonly IDescendantService _descendantService;
         private readonly IContentRepository _contentRepository;
 
-        public DeleteUnpublishedCarouselPages(IContentLoader contentLoader, ISiteDefinitionRepository siteDefinitionRepository, bool stopSignaled, IContentRepository contentRepository, IDescendantService descendantService)
+        public DeleteUnpublishedCarouselPages(IContentLoader contentLoader, ISiteDefinitionRepository siteDefinitionRepository, IContentRepository contentRepository, IDescendantService descendantService)
         {
             _contentLoader = contentLoader;
             _siteDefinitionRepository = siteDefinitionRepository;
-            _stopSignaled = stopSignaled;
             _contentRepository = contentRepository;
             _descendantService = descendantService;
+            IsStoppable = true;
         }
 
         public override void Stop()
