@@ -5,6 +5,8 @@ using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Routing;
 using Optimizely002.Business.Extensions;
+using Optimizely002.Services;
+using Optimizely002.Services.Interfaces;
 
 namespace Optimizely002
 {
@@ -34,6 +36,8 @@ namespace Optimizely002
                 .AddEmbeddedLocalization<Startup>();
 
             services.Configure<UploadOptions>(x => { x.FileSizeLimit = 52438800; });
+
+            services.AddScoped<IDescendantService, DescendantService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
