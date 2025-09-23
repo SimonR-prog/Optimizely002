@@ -19,3 +19,10 @@
 <h1>@Model.Layout.StartPage.Name</h1>
 
 <h1>@Model.Layout.SettingsPage.Name</h1>
+
+
+@* render viewcomponent *@
+@await Component.InvokeAsync("Carousel")
+
+@* render block *@
+@Html.PropertyFor(model => model.CurrentPage.Carousel)

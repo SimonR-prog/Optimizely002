@@ -1,5 +1,6 @@
 ﻿using EPiServer.Web;
 using Optimizely002.Business;
+using Optimizely002.Models.Blocks;
 using System.ComponentModel.DataAnnotations;
 
 namespace Optimizely002.Models.Pages;
@@ -55,4 +56,23 @@ public class StartPage : SitePageData
         )]
     [UIHint(UIHint.Image)]
     public virtual ContentReference Image { get; set; }
+
+
+
+    [Display(
+        GroupName = SystemTabNames.Content,
+        Order = 50
+        )]
+    [CultureSpecific]
+    [AllowedTypes(
+        typeof(CarouselPage),
+        typeof(CarouselBlock)
+        )]
+    public virtual ContentArea Carousel { get; set; }
+
+
+
+
+
+
 }
