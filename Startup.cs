@@ -56,21 +56,19 @@ public class Startup
             if (httpContext.Response.StatusCode == 404)
             {
                 var path = httpContext.Request.Path.Value?.ToLowerInvariant();
+                var supportedCultures = new HashSet<string> { "en", "sv" };
                 var cultureSegment = "en";
 
-                switch (path.Split('/', StringSplitOptions.RemoveEmptyEntries).FirstOrDefault())
+                if (!string.IsNullOrEmpty(path))
                 {
-                    case "sv":
-                        cultureSegment = "sv";
-                        break;
-                    case "en":
-                        cultureSegment = "en";
-                        break;
-                    default:
-                        cultureSegment = "en";
-                        break;
-                }
+                    var firstSegment = path.Split('/', StringSplitOptions.RemoveEmptyEntries).FirstOrDefault();
 
+                    if (!string.IsNullOrEmpty(firstSegment) && supportedCultures.Contains(firstSegment))
+                    {
+                        cultureSegment = firstSegment;
+                    }
+
+                }
 
                 httpContext.Response.Redirect($"/{cultureSegment}/error");
 
