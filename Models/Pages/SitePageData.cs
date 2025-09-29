@@ -6,6 +6,15 @@ namespace Optimizely002.Models.Pages;
 public class SitePageData : PageData
 {
     [Display(
+        GroupName = SystemTabNames.Settings,
+        Order = 10)]
+    [Editable(false)]
+    [CultureSpecific]
+    public virtual DateTime? XmlSitemapDate { get; set; }
+
+
+
+    [Display(
         GroupName = Globals.GroupNames.MetaData,
         Order = 100
         )]

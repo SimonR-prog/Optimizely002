@@ -14,13 +14,13 @@ namespace Optimizely002.Models.Pages;
     Include = new[]
     {
         typeof(ArticlePage),
-        typeof(SettingsPage)
+        typeof(SettingsPage),
+        typeof(ContainerPage),
+        typeof(XmlSitemap)
     }
 )]
 public class StartPage : SitePageData
 {
-
-
     [Display(
         GroupName = SystemTabNames.Content,
         Order = 10

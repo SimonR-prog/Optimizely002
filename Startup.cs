@@ -38,6 +38,7 @@ namespace Optimizely002
             services.Configure<UploadOptions>(x => { x.FileSizeLimit = 52438800; });
 
             services.AddScoped<IDescendantService, DescendantService>();
+            services.AddScoped<IXmlSitemapService, XmlSitemapService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
