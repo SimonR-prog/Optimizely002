@@ -6,9 +6,10 @@ public class Program
 {
     public static IConfiguration Configuration { get; } =
         new ConfigurationBuilder()
-        .AddJsonFile("appSettings.json", false, true)
-        .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", true, true)
-        .AddJsonFile($"appsettings.{Environment.MachineName}.json", true, true)
+        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+        .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", optional: true, reloadOnChange: true)
+        .AddJsonFile($"appsettings.{Environment.UserName}.json", optional: true, reloadOnChange: true)
+        .AddJsonFile($"appsettings.{Environment.MachineName}.json", optional: true, reloadOnChange: true)
         .AddEnvironmentVariables()
         .Build();
 
@@ -23,7 +24,6 @@ public class Program
     public static IHostBuilder CreateHostBuilder(string[] args) =>
         Host.CreateDefaultBuilder(args)
             .ConfigureCmsDefaults()
-            .UseSerilog()   
+            .UseSerilog()
             .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>());
-
 }
