@@ -32,6 +32,7 @@ public class Startup
         services
             .AddCmsAspNetIdentity<ApplicationUser>()
             .AddCms()
+            .AddFind()
             .AddNackademin()
             .AddAdminUserRegistration()
             .AddEmbeddedLocalization<Startup>();
@@ -40,6 +41,7 @@ public class Startup
 
         services.AddScoped<IDescendantService, DescendantService>();
         services.AddScoped<IXmlSitemapService, XmlSitemapService>();
+        services.AddScoped<IFindService, FindService>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

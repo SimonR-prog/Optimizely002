@@ -1,0 +1,40 @@
+﻿@using EPiServer.Shell.Web.Mvc.Html
+
+
+<link href="/css/find_page.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <form asp-controller="FindPage" asp-action="FindContent" class="d-flex" id="findForm" method="post">
+                <div class="input-group search-box">
+                    <input class="form-control search-input" id="findQuery" type="search" name="query" placeholder="@Html.Translate("/shared/searchforcontent")" aria-label="Find" />
+                    <button class="input-group-text search-button">
+                        <i class="fas fa-search" />
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            @if (Model.Result != null)
+            {
+                <h3 @Html.Translate("/shared/searchresults") "@Model.Query" ></h3>
+                <div class="list-group">
+                    @foreach (var result in await Model.Result)
+                    {
+                        <div class="list-group-item mb-3 border rounded"> 
+                            <h5 class="mb-1">
+                                <a href="@result.Url" class="text-decoration-none text-primary">@result.Title</a>
+                            </h5>
+                            <p class="mb-1">@Html.Raw(result.Excerpt)</p>
+                            <small class="text-muted">@Html.Translate("/shared/lastupdated"): @result.UpdateDate</small>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>

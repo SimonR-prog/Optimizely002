@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<languages>
+	<language name="English" id="en">
+		<shared>
+			<searchforcontent>Search for content</searchforcontent>
+			<searchresults>Search results for</searchresults>
+			<lastupdated>Last updated</lastupdated>
+		</shared>
+	</language>
+	<language name="Svenska" id="sv">
+		<shared>
+			<searchforcontent>Sök efter innehåll</searchforcontent>
+			<searchresults>Sökresultat för</searchresults>
+			<lastupdated>Senast uppdaterat</lastupdated>
+		</shared>
+	</language>
+</languages>
